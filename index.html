@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Happy Birthday Fiza ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080708;
+      color: #f5eee8;
+      font-family: "Cormorant Garamond", serif;
+      overflow-x: hidden;
+    }
+
+    /* ---------------- BACKGROUND ---------------- */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 20;
+
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          rgba(132, 50, 72, 0.18),
+          transparent 45%
+        );
+    }
+
+    /* ---------------- INTRO ---------------- */
+
+    .intro {
+      min-height: 100vh;
+      min-height: 100svh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 30px;
+
+      position: relative;
+    }
+
+    .intro-content {
+      animation: introAppear 2s ease forwards;
+    }
+
+    .small-title {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #a99790;
+      margin-bottom: 25px;
+    }
+
+    .name {
+      font-size: clamp(90px, 17vw, 180px);
+      font-weight: 400;
+      line-height: 0.75;
+      letter-spacing: -6px;
+    }
+
+    .my-baby {
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(35px, 6vw, 60px);
+      color: #d39aaa;
+      margin-top: 30px;
+    }
+
+    .start-button {
+      margin-top: 50px;
+
+      padding: 14px 28px;
+
+      border: 1px solid rgba(210, 174, 119, 0.5);
+      border-radius: 50px;
+
+      background: transparent;
+      color: #eee4dc;
+
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      transition: 0.3s ease;
+    }
+
+    .start-button:hover {
+      background: #c3a06d;
+      color: #111;
+      box-shadow: 0 0 40px rgba(195,160,109,0.2);
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 4px;
+      color: #665c58;
+    }
+
+    /* ---------------- PHOTOS ---------------- */
+
+    .photos {
+      padding: 120px 7%;
+      background: linear-gradient(
+        to bottom,
+        #080708,
+        #10090c
+      );
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title span {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #b18a57;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      font-size: clamp(55px, 8vw, 95px);
+      font-weight: 400;
+      margin-top: 15px;
+    }
+
+    .section-title p {
+      max-width: 600px;
+      margin: 20px auto 0;
+
+      font-size: 22px;
+      line-height: 1.5;
+      color: #b9aaa3;
+    }
+
+    .photo-grid {
+      max-width: 1000px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 15px;
+    }
+
+    .photo {
+      overflow: hidden;
+      position: relative;
+
+      background: #111;
+
+      box-shadow:
+        0 25px 60px rgba(0,0,0,0.5);
+    }
+
+    .photo:nth-child(1) {
+      grid-column: span 5;
+    }
+
+    .photo:nth-child(2) {
+      grid-column: span 3;
+      margin-top: 60px;
+    }
+
+    .photo:nth-child(3) {
+      grid-column: span 4;
+    }
+
+    .photo:nth-child(4) {
+      grid-column: span 4;
+      margin-top: 50px;
+    }
+
+    .photo:nth-child(5) {
+      grid-column: span 3;
+      margin-top: 90px;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      display: block;
+
+      filter: saturate(0.8);
+
+      transition: transform 0.8s ease;
+    }
+
+    .photo:hover img {
+      transform: scale(1.05);
+    }
+
+    .photo-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      padding: 35px 15px 15px;
+
+      background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.75)
+      );
+
+      font-size: 20px;
+    }
+
+    /* ---------------- LETTER ---------------- */
+
+    .letter-section {
+      padding: 140px 20px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #1c0d13,
+          #080708 60%
+        );
+    }
+
+    .letter-container {
+      max-width: 780px;
+      margin: auto;
+    }
+
+    .letter {
+      position: relative;
+
+      padding: clamp(35px, 7vw, 75px);
+
+      color: #2b2421;
+
+      background-color: #f3ede4;
+
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 31px,
+          rgba(90,70,55,0.07) 32px
+        );
+
+      box-shadow:
+        0 35px 100px rgba(0,0,0,0.6);
+
+      transform: rotate(-0.2deg);
+    }
+
+    .letter::before {
+      content: "";
+
+      position: absolute;
+      inset: 13px;
+
+      border: 1px solid rgba(90,60,40,0.2);
+
+      pointer-events: none;
+    }
+
+    .letter-date {
+      text-align: right;
+
+      font-size: 16px;
+
+      color: #8a766a;
+
+      margin-bottom: 30px;
+    }
+
+    .letter h2 {
+      font-family: "Great Vibes", cursive;
+
+      font-size: 60px;
+
+      color: #622b3d;
+
+      font-weight: 400;
+
+      margin-bottom: 25px;
+    }
+
+    .letter p {
+      font-size: clamp(20px, 2.4vw, 25px);
+
+      line-height: 1.55;
+
+      margin-bottom: 20px;
+    }
+
+    .letter .opening {
+      font-size: 27px;
+    }
+
+    .signature {
+      font-family: "Great Vibes", cursive;
+
+      color: #622b3d;
+
+      font-size: 45px;
+
+      text-align: right;
+
+      margin-top: 35px;
+    }
+
+    /* ---------------- FINAL ---------------- */
+
+    .final {
+      min-height: 100vh;
+      min-height: 100svh;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 30px;
+
+      background:
+        radial-gradient(
+          circle,
+          #1b0d12,
+          #080708 65%
+        );
+    }
+
+    .final h2 {
+      font-size: clamp(75px, 13vw, 150px);
+
+      font-weight: 400;
+
+      line-height: 0.8;
+    }
+
+    .birthday {
+      font-family: "Great Vibes", cursive;
+
+      color: #d49aaa;
+
+      font-size: clamp(55px, 9vw, 100px);
+    }
+
+    .final-line {
+      width: 70px;
+      height: 1px;
+
+      background: #b18a57;
+
+      margin: 35px auto;
+    }
+
+    .final p {
+      font-size: 25px;
+
+      color: #d0c2ba;
+
+      line-height: 1.5;
+    }
+
+    .heart {
+      font-size: 25px;
+
+      margin-top: 35px;
+
+      animation: heartbeat 1.7s infinite;
+    }
+
+    /* ---------------- ANIMATIONS ---------------- */
+
+    @keyframes introAppear {
+
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+    @keyframes heartbeat {
+
+      50% {
+        transform: scale(1.25);
+      }
+
+    }
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(35px);
+
+      transition:
+        opacity 1s ease,
+        transform 1s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------------- MOBILE ---------------- */
+
+    @media (max-width: 700px) {
+
+      .photos {
+        padding: 90px 20px;
+      }
+
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+      }
+
+      .photo:nth-child(n) {
+        grid-column: auto;
+        margin-top: 0;
+      }
+
+      .photo:nth-child(1),
+      .photo:nth-child(5) {
+        grid-column: span 2;
+      }
+
+      .letter-section {
+        padding: 90px 18px;
+      }
+
+      .letter {
+        padding: 40px 27px;
+      }
+
+      .letter h2 {
+        font-size: 52px;
+      }
+
+      .letter p {
+        font-size: 21px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="intro-content">
+
+      <div class="small-title">
+        A little something for
+      </div>
+
+      <h1 class="name">
+        Fiza
+      </h1>
+
+      <div class="my-baby">
+        my baby ❤️
+      </div>
+
+      <button
+        class="start-button"
+        onclick="document.getElementById('photos').scrollIntoView({behavior:'smooth'})"
+      >
+        open your surprise
+      </button>
+
+    </div>
+
+    <div class="scroll">
+      SCROLL
+    </div>
+
+  </section>
+
+
+  <!-- PHOTOS -->
+
+  <section class="photos" id="photos">
+
+    <div class="section-title reveal">
+
+      <span>
+        a little piece of your story
+      </span>
+
+      <h2>
+        Look at you...
+      </h2>
+
+      <p>
+        Before you became the person I know and love today,
+        you were this little girl, growing up and becoming you.
+      </p>
+
+    </div>
+
+
+    <div class="photo-grid">
+
+      <div class="photo reveal">
+        <img src="images/fiza-1.jpeg">
+        <div class="photo-name">
+          little Fiza ❤️
+        </div>
+      </div>
+
+      <div class="photo reveal">
+        <img src="images/fiza-2.jpeg">
+        <div class="photo-name">
+          my baby
+        </div>
+      </div>
+
+      <div class="photo reveal">
+        <img src="images/fiza-3.jpeg">
+        <div class="photo-name">
+          still cute tho 😂
+        </div>
+      </div>
+
+      <div class="photo reveal">
+        <img src="images/fiza-4.jpeg">
+        <div class="photo-name">
+          and then she grew up...
+        </div>
+      </div>
+
+      <div class="photo reveal">
+        <img src="images/fiza-5.jpeg">
+        <div class="photo-name">
+          always loved ❤️
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LETTER -->
+
+  <section class="letter-section">
+
+    <div class="letter-container">
+
+      <div class="letter reveal">
+
+        <div class="letter-date">
+          06 • 10 • 2026
+        </div>
+
+        <h2>
+          My baby,
+        </h2>
+
+
+        <p class="opening">
+          Assalamualaikum. A very happy birthday Fiza ❤️
+        </p>
+
+
+        <p>
+          Well, it doesnt take your birthday for me to tell you
+          how much I love you and what you mean to me, cuz I do it
+          everyday lol. But I wanna take a moment and appreciate
+          how far you've come in your life. I mean, my baby is
+          graduated now ❤️.
+        </p>
+
+
+        <p>
+          Tho, the most important person in your life, your Dad,
+          isnt with you anymore, and may Allah grant him the
+          highest rank in Jannah, Ameen. And ik you will eventually
+          make him proud, Ameen.
+        </p>
+
+
+        <p>
+          May Allah bless you with good health, happiness,
+          and a long beautiful life, Ameen. ❤️
+        </p>
+
+
+        <p>
+          Despite all the obstacles, you're still here,
+          still moving forward, and I'm honestly so proud of you
+          for that. My love, I know that your heart is so pure
+          and filled with kindness, and thats one of the things
+          I love about you so much.
+        </p>
+
+
+        <p>
+          And I promise you, I'm never gonna break your heart.
+          I wanna marry you one day and fill your life with love,
+          laughter, peace and security. I wanna be someone you can
+          always feel safe with, someone you can rely on, and
+          someone who's gonna stand beside you no matter what.
+        </p>
+
+
+        <p>
+          I'm genuinely so lucky to have you in my life,
+          and I hope you always know how much you mean to me. ❤️
+        </p>
+
+
+        <div class="signature">
+          I love you so much,<br>
+          my baby ❤️
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL -->
+
+  <section class="final">
+
+    <div class="reveal">
+
+      <h2>
+        Happy
+        <br>
+
+        <span class="birthday">
+          Birthday
+        </span>
+      </h2>
+
+      <div class="final-line"></div>
+
+      <p>
+        For Fiza, my baby. ❤️
+        <br>
+        I'm so lucky to have you in my life.
+      </p>
+
+      <div class="heart">
+        ♡
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <script>
+
+    /* Reveal animations */
+
+    const elements =
+      document.querySelectorAll(".reveal");
+
+    const observer =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.15
+        }
+
+      );
+
+
+    elements.forEach(element => {
+
+      observer.observe(element);
+
+    });
+
+  </script>
+
+</body>
+</html>
